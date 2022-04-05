@@ -9,3 +9,37 @@
 - Suggestions for items for plant care
 - User can add photos for each plant
 - Suggestions for similar plants
+
+## Screens
+### Home Screen/Dashboard
+  - Tasks truncated (priority)
+  - Week's insights 
+
+### Plants
+  - All plants (ordered by species)
+  - Button to add plants
+  - (Potentially) plant care products
+
+### Add plants
+  - 
+
+### View plant (when plant pressed in screen Plants
+  - Insights
+  - Details
+  - Edit
+  - Photos
+
+### Tasks
+  - Task checklist
+  - Add, delete, edit task
+  - Filter (if have time)
+
+### Add Tasks
+
+### View Notifications
+  - Push notifications
+
+### Navigation
+  - Home/Dashboard (weekly tasks)
+  - Plants/Plant Care (inventory of all plants)
+  - Tasks
