@@ -11,30 +11,30 @@
 - Suggestions for similar plants
 
 ## Screens
-### Home Screen/Dashboard
+### Home Screen/Dashboard (Rajavi, Maanav)
   - Tasks truncated (priority)
   - Week's insights 
 
-### Plants
+### Plants (Rajavi, Christie)
   - All plants (ordered by species)
   - Button to add plants
   - (Potentially) plant care products
 
-### Add plants
+### Add plants (Steven)
   - 
 
-### View plant (when plant pressed in screen Plants
+### View plant (when plant pressed in screen Plants) (Christie, Priscilla)
   - Insights
   - Details
   - Edit
   - Photos
 
-### Tasks
+### Tasks (Maanav, Priscilla)
   - Task checklist
   - Add, delete, edit task
   - Filter (if have time)
 
-### Add Tasks
+### Add Tasks (Steven)
 
 ### View Notifications
   - Push notifications
