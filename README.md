@@ -21,7 +21,9 @@
   - (Potentially) plant care products
 
 ### Add plants (Steven)
-  - 
+  - Nickname
+  - Species
+  - Picture
 
 ### View plant (when plant pressed in screen Plants) (Christie, Priscilla)
   - Insights
@@ -35,6 +37,8 @@
   - Filter (if have time)
 
 ### Add Tasks (Steven)
+  - Which Plant?
+  - 
 
 ### View Notifications
   - Push notifications
