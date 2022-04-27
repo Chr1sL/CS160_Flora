@@ -1,13 +1,11 @@
 package com.example.cs160_flora;
-
 import android.widget.ImageView;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
 
 public class Plant {
     String name = "";
-    String[] species = new String[10];
     String mySpecie = "";
     ImageView image;
+    String mySpecies = "";
+    Date date = null;
 }

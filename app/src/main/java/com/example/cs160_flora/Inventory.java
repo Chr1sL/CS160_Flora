@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Inventory extends AppCompatActivity {
+public class Inventory extends AppCompatActivity implements plantFragment.OnListFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,6 @@ public class Inventory extends AppCompatActivity {
         ImageButton homeBtn = (ImageButton) findViewById(R.id.homeButton);
         ImageButton taskBtn = (ImageButton) findViewById(R.id.taskButton);
         ImageButton addBtn = (ImageButton) findViewById(R.id.addButton);
-        ImageButton viewPlantBtn = (ImageButton) findViewById(R.id.plant1);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,12 +44,10 @@ public class Inventory extends AppCompatActivity {
             }
         });
 
-        viewPlantBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Inventory.this, viewPlant.class);
-                startActivity(intent);
-            }
-        });
+
     }
+
+//    @Override
+//    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+//    }
 }
