@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frequency">
+        <item>Once a day</item>
+        <item>Twice a week</item>
+        <item>Biweekly</item>
+        <item>Once a month</item>
+    </string-array>
+</resources>

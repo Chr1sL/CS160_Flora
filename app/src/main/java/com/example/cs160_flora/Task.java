@@ -2,25 +2,22 @@ package com.example.cs160_flora;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import java.time.LocalTime;
-@RequiresApi(api = Build.VERSION_CODES.O)
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task {
+    public static List<Task> allTasks = new ArrayList<Task>();
     String name;
-    Plant plant;
+    String plant;
     String schedule;
     String frequency;
-    LocalTime timeOfDay;
+    String timeOfDay;
     boolean setReminder;
-    public void createTask(String myName) {
+
+    public Task(String myName, String myPlant, String mSchedule, String mFrequency, boolean myReminder, String myTimeOfDay) {
         name = myName;
-    }
-    public void selectPlant(Plant myPlant) {
         plant = myPlant;
-    }
-    public void selectSchedule(String mSchedule) {
         schedule = mSchedule;
-    }
-    public void setSchedule(String mFrequency, boolean myReminder, LocalTime myTimeOfDay) {
         frequency = mFrequency;
         timeOfDay = myTimeOfDay;
         setReminder = myReminder;
