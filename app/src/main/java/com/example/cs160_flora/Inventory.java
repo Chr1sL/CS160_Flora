@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Inventory extends AppCompatActivity implements plantFragment.OnListFragmentInteractionListener {
+public class Inventory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
