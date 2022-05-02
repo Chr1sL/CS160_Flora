@@ -58,4 +58,102 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/plus" />
 
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Today"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/Tasks"
+        app:layout_constraintTop_toBottomOf="@id/Tasks" />
+
+    <LinearLayout
+        android:id="@+id/todayList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/today"
+        android:layout_marginHorizontal="32dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Montserra Deliciosa"
+            tools:ignore="OnClick" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move Jade Plant away from sunlight"
+            tools:ignore="OnClick" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase fertilizer for Spider Plant"
+            tools:ignore="OnClick" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measure height for Montserra"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tomorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Tomorrow"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/Tasks"
+        app:layout_constraintTop_toBottomOf="@id/todayList" />
+
+    <LinearLayout
+        android:id="@+id/tomorrowList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tomorrow"
+        android:layout_marginHorizontal="32dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Jade Plant"
+            tools:ignore="OnClick" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Move Spider Plant into sunlight"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/thursday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Thursday"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/Tasks"
+        app:layout_constraintTop_toBottomOf="@id/tomorrowList" />
+
+    <LinearLayout
+        android:id="@+id/thursdayList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/thursday"
+        android:layout_marginHorizontal="32dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Montserra Deliciosa"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

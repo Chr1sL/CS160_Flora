@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 public class CreateTaskTwo extends AppCompatActivity {
 
     TableLayout plants;
+    Button next;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,7 @@ public class CreateTaskTwo extends AppCompatActivity {
                 TextView plantName = new TextView(this);
                 plantName.setText(currPlant.name);
                 TextView specie = new TextView(this);
-                specie.setText(currPlant.mySpecie);
+                specie.setText(currPlant.mySpecies);
 
                 TableLayout plantCell = new TableLayout(this);
                 plantCell.addView(plantImage);
@@ -62,6 +65,16 @@ public class CreateTaskTwo extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+
+                next = findViewById(R.id.button);
+                next.setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.O)
+                    @SuppressLint("SetTextI18n")
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), CreateTaskThree.class);
+                        startActivity(intent);
+                    }});
             }
         }
 

@@ -72,10 +72,20 @@
         app:layout_constraintStart_toEndOf="@+id/addButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment android:name="com.example.cs160_flora.plantFragment"
-        android:id="@+id/main_fragment"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plantsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="18dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+<!--    <fragment android:name="com.example.cs160_flora.plantFragment"-->
+<!--        android:id="@+id/main_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
 
 
 

@@ -10,10 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS160_Flora">
         <activity
-            android:name=".viewPlants"
+            android:name=".AddTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewPlant"
             android:exported="false" />
         <activity
             android:name=".Inventory"
+            android:exported="false" />
+        <activity
+            android:name=".TaskList"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTaskOne"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTaskTwo"
+            android:exported="false" />
+        <activity
+            android:name=".CreateTaskThree"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

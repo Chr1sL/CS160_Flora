@@ -17,12 +17,12 @@ public class TaskList extends AppCompatActivity {
         ImageButton addTaskBtn = (ImageButton) findViewById(R.id.addButton);
         ImageButton homeBtn = (ImageButton) findViewById(R.id.homeButton);
         ImageButton taskBtn = (ImageButton) findViewById(R.id.taskButton);
-        ImageButton addBtn = (ImageButton) findViewById(R.id.addButton);
+//        ImageButton addBtn = (ImageButton) findViewById(R.id.addButton);
 
         addTaskBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TaskList.this, CreateTaskOne.class);
+                Intent intent = new Intent(TaskList.this, AddTaskActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,12 +44,4 @@ public class TaskList extends AppCompatActivity {
             }
         });
 
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Change once add plant screen is created
-                Intent intent = new Intent(TaskList.this, Inventory.class);
-                startActivity(intent);
-            }
-        });
 }}

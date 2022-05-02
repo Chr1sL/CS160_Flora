@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Change once task screen is created
-                Intent intent = new Intent(MainActivity.this, Inventory.class);
+                Intent intent = new Intent(MainActivity.this, TaskList.class);
                 startActivity(intent);
             }
         });
