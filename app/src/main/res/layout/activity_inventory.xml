@@ -52,7 +52,7 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,6 +72,7 @@
         app:layout_constraintStart_toEndOf="@+id/addButton"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/plantsList"
         android:layout_width="match_parent"
@@ -88,5 +89,7 @@
 <!--        android:layout_height="match_parent" />-->
 
 
+=======
+>>>>>>> 98bcf228996ea1cfeace1f81ce81f2997a43f844
 
 </androidx.constraintlayout.widget.ConstraintLayout>

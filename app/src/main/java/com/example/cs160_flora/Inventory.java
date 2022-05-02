@@ -10,10 +10,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
 
 public class Inventory extends AppCompatActivity implements plantFragment.OnListFragmentInteractionListener {
+=======
+public class Inventory extends AppCompatActivity {
+>>>>>>> 98bcf228996ea1cfeace1f81ce81f2997a43f844
 
     List<String> plants = Arrays.asList("Pink Anthurium", "Dieffenbachia", "Haworthia", "Spider Plant", "Montserra Deliciosa");
 
