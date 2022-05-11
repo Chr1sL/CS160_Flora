@@ -48,13 +48,15 @@ public class PlantSpeciesAdapter extends RecyclerView.Adapter<PlantSpeciesAdapte
     }
 
     // Store a member variable for the contacts
-    private List<String> mArray;
     private Context mContext;
+    private OnImageClickListener onImageClickListener;
+    private List<Plant> mInventory;
 
     // Pass in the contact array into the constructor
-    public PlantSpeciesAdapter(List<String> array, Context c) {
+    public PlantSpeciesAdapter(List<Plant> inventory, Context c, OnImageClickListener listener) {
         mContext = c;
-        mArray = array;
+        mInventory = inventory;
+        onImageClickListener = listener;
     }
 
     // Usually involves inflating a layout from XML and returning the holder
@@ -76,34 +78,20 @@ public class PlantSpeciesAdapter extends RecyclerView.Adapter<PlantSpeciesAdapte
     public void onBindViewHolder(PlantSpeciesAdapter.ViewHolder holder, int position) {
         // Get the data model based on position
         TextView name_tv = holder.nameTextView;
-        name_tv.setText(mArray.get(position));
-        switch(position) {
-            case 0:
-                holder.plantCardView.setBackgroundResource(R.drawable.plant0);
-                break;
-            case 1:
-                holder.plantCardView.setBackgroundResource(R.drawable.plant1);
-                break;
-            case 2:
-                holder.plantCardView.setBackgroundResource(R.drawable.plant2);
-                break;
-            case 3:
-                holder.plantCardView.setBackgroundResource(R.drawable.plant3);
-                break;
-            case 4:
-                holder.plantCardView.setBackgroundResource(R.drawable.plant4);
-                break;
-            default:
-                break;
-        }
+        name_tv.setText(mInventory.get(position).name);
+        holder.plantCardView.setBackgroundResource(mInventory.get(position).image);
         holder.plantCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.out.println(mContext.getClass().getSimpleName());
-                if(mContext instanceof Inventory){
+                if(mContext instanceof MainActivity ||
+                        mContext instanceof ExploreActivity ){
                     Intent intent = new Intent(mContext, viewPlant.class);
+                    intent.putExtra("plantName", mInventory.get(position).name);
+                    intent.putExtra("plantSpecies", mInventory.get(position).mySpecies);
                     mContext.startActivity(intent);
                 } else {
+                    onImageClickListener.onImageClick(mInventory.get(position).name);
                     if(holder.checked.getVisibility() == View.GONE) {
                         holder.checked.setVisibility(View.VISIBLE);
                         holder.selectedOverlay.setVisibility(View.VISIBLE);
@@ -120,7 +108,7 @@ public class PlantSpeciesAdapter extends RecyclerView.Adapter<PlantSpeciesAdapte
     // Returns the total count of items in the list
     @Override
     public int getItemCount() {
-        return mArray.size();
+        return mInventory.size();
     }
 
 }

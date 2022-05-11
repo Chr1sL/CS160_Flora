@@ -5,6 +5,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,18 +15,10 @@ public class TaskList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
-        ImageButton addTaskBtn = (ImageButton) findViewById(R.id.addButton);
         ImageButton homeBtn = (ImageButton) findViewById(R.id.homeButton);
         ImageButton taskBtn = (ImageButton) findViewById(R.id.taskButton);
 //        ImageButton addBtn = (ImageButton) findViewById(R.id.addButton);
 
-        addTaskBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TaskList.this, AddTaskActivity.class);
-                startActivity(intent);
-            }
-        });
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override

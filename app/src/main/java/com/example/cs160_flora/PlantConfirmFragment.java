@@ -2,11 +2,18 @@ package com.example.cs160_flora;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,11 @@ public class PlantConfirmFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private PlantViewModel viewModel;
+    private TextView plantName;
+    private TextView plantSpecies;
+    private ImageView image;
+
 
     public PlantConfirmFragment() {
         // Required empty public constructor
@@ -53,6 +65,7 @@ public class PlantConfirmFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        viewModel = ViewModelProviders.of(requireActivity()).get(PlantViewModel.class);
     }
 
     @Override
@@ -60,5 +73,33 @@ public class PlantConfirmFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_plant_confirm, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        plantName = view.findViewById(R.id.plantName);
+        plantSpecies = view.findViewById(R.id.plantSpecies);
+        image = view.findViewById(R.id.pictureImage);
+        viewModel.getName().observe(requireActivity(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                plantName.setText(s);
+            }
+        });
+        viewModel.getSpecies().observe(requireActivity(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                plantSpecies.setText(s);
+            }
+        });
+        viewModel.getImageResource().observe(requireActivity(), new Observer<Integer>() {
+            @Override
+            public void onChanged(@Nullable Integer i) {
+                if (i != null) {
+                    image.setImageResource(i);
+                }
+            }
+        });
     }
 }

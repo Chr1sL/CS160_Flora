@@ -41,14 +41,14 @@ public class CreateTaskTwo extends AppCompatActivity {
             for (int j = 0; j < rows; j++) {
                 Plant currPlant = plantList[(i*3)+j];
 
-                ImageView plantImage = currPlant.image;
+//                ImageView plantImage = currPlant.image;
                 TextView plantName = new TextView(this);
                 plantName.setText(currPlant.name);
                 TextView specie = new TextView(this);
                 specie.setText(currPlant.mySpecies);
 
                 TableLayout plantCell = new TableLayout(this);
-                plantCell.addView(plantImage);
+//                plantCell.addView(plantImage);
                 plantCell.addView(plantName);
                 plantCell.addView(specie);
 

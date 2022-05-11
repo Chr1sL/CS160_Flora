@@ -14,6 +14,7 @@
         android:textSize="32sp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="Select Species"
         app:layout_constraintTop_toTopOf="parent"/>
 

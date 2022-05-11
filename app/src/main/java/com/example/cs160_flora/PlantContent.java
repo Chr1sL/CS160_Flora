@@ -9,11 +9,11 @@ public class PlantContent {
     static final List<Plant> ITEMS = new ArrayList<>();
 
     public static void loadPlant(String name, Date date, String species) {
-        Plant newItem = new Plant();
-        newItem.name = name;
-        newItem.date = date;
-        newItem.mySpecies = species;
-        addItem(newItem);
+//        Plant newItem = new Plant();
+//        newItem.name = name;
+//        newItem.date = date;
+//        newItem.mySpecies = species;
+//        addItem(newItem);
     }
 
     private static void addItem(Plant item) {

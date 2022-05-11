@@ -7,120 +7,121 @@ android:layout_height="match_parent"
 android:foregroundTint="#000000"
 tools:context=".TaskScheduleFragment">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".CreateActivity"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="0dp">
-
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="285dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="176dp"
-        android:backgroundTint="#000000"
-        android:entries="@array/time"
-        android:foregroundTint="#000000"
-        android:spinnerMode="dropdown"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="281dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#000000"
-        android:entries="@array/schedules"
-        android:foregroundTint="#000000"
-        android:spinnerMode="dropdown"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="283dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="104dp"
-        android:backgroundTint="#000000"
-        android:entries="@array/frequency"
-        android:foregroundTint="#000000"
-        android:spinnerMode="dropdown"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.595"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/scheduleTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:text="Set Schedule"
         android:textSize="32sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="377dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="20dp"
-        android:text="Set Reminder"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="Set Schedule"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/scheduleTypeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Time"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinner3" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="19dp"
-        android:text="Frequency"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner2"
-        app:layout_constraintEnd_toStartOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinner2" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:text="Schedule"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinner" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/scheduleTitle"
+        app:layout_constraintTop_toBottomOf="@id/scheduleTitle" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scheduleBG"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input"
+        android:layout_marginRight="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/scheduleTypeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/scheduleTypeTitle">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:entries="@array/schedules"
+            android:spinnerMode="dropdown"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/freqTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequency"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/scheduleTitle"
+        app:layout_constraintTop_toBottomOf="@id/scheduleTypeTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/freqBG"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input"
+        android:layout_marginRight="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/freqTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/freqTitle">
+        <Spinner
+            android:id="@+id/freqSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:entries="@array/frequency"
+            android:spinnerMode="dropdown"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/TimeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/scheduleTitle"
+        app:layout_constraintTop_toBottomOf="@id/freqTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timeBG"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:background="@drawable/input"
+        android:layout_marginRight="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/TimeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/TimeTitle">
+        <Spinner
+            android:id="@+id/timeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:entries="@array/time"
+            android:spinnerMode="dropdown"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="50dp"
+        android:text="Set Reminder"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeTitle" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

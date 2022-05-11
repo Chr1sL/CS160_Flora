@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,12 +28,11 @@ public class TaskSpeciesFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    List<String> plants = Arrays.asList("Pink Anthurium", "Dieffenbachia", "Haworthia", "Spider Plant", "Montserra Deliciosa");
-
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    List<Plant> plants;
 
     public TaskSpeciesFragment() {
         // Required empty public constructor
@@ -63,6 +63,13 @@ public class TaskSpeciesFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        plants = new ArrayList<Plant>();
+        plants.add(new Plant("Pink Anthurium", R.drawable.plant0, "Pink Anthurium"));
+        plants.add(new Plant("Dieffenbachia", R.drawable.plant1, "Dieffenbachia"));
+        plants.add(new Plant("Haworthia", R.drawable.plant2, "Haworthia"));
+        plants.add(new Plant("Spider Plant", R.drawable.plant3, "Spider Plant"));
+        plants.add(new Plant("Montserra Deliciosa", R.drawable.plant4, "Montserra Deliciosa"));
     }
 
     @Override
@@ -80,7 +87,12 @@ public class TaskSpeciesFragment extends Fragment {
 
     private void setupRecyclerView() {
         RecyclerView myTreesList = getView().findViewById(R.id.plantsList);
-        PlantSpeciesAdapter adapter = new PlantSpeciesAdapter(plants, getActivity());
+        PlantSpeciesAdapter adapter = new PlantSpeciesAdapter(plants, getActivity(), new OnImageClickListener() {
+            @Override
+            public void onImageClick(String plantSpecies) {
+
+            }
+        });
         myTreesList.setAdapter(adapter);
         myTreesList.setLayoutManager(new GridLayoutManager(getActivity(), 3));
     }

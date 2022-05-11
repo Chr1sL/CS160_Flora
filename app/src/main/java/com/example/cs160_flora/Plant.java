@@ -3,8 +3,13 @@ import android.widget.ImageView;
 import java.util.Date;
 
 public class Plant {
-    String name = "";
-    ImageView image;
-    String mySpecies = "";
-    Date date = null;
+    public String name = "";
+    public Integer image = 0;
+    public String mySpecies = "";
+
+    public Plant(String name, Integer image, String species) {
+        this.name = name;
+        this.image = image;
+        this.mySpecies = species;
+    }
 }

@@ -8,7 +8,7 @@
     tools:context=".viewPlant">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/topBar"
@@ -27,12 +27,82 @@
                 app:layout_constraintTop_toTopOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="650dp"
-            android:background="@drawable/view_plant"
+        <TextView
+            android:id="@+id/viewPlantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:text="Plant Name"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/topBar"/>
+
+        <TextView
+            android:id="@+id/viewPlantSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="Plant Species"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPlantName"/>
+
+        <ImageView
+            android:id="@+id/plantImage"
+            android:layout_width="175dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_400"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPlantSpecies" />
+
+        <TextView
+            android:id="@+id/insightsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:text="Insights"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plantImage"/>
+
+        <ImageView
+            android:id="@+id/insightImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="30dp"
+            android:src="@drawable/insights"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/insightsTitle" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomButton"
+            android:clickable="false"
+            android:background="@drawable/next_button"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="45dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/insightImage"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/bottomButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sustenance"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
